@@ -1,11 +1,12 @@
 $pink: #E9BCBC;
 $white: #ffffff;
 $grey: #F1F1F1;
+*{
+   color: #F1F1F1;
+}
 
 body {
-   
    box-sizing: border-box;
-   
 }
 //////////////////////////////////////////////////////////////////////////////
 .wrapper {
@@ -22,8 +23,6 @@ body {
    font-weight: 400;
 }
 .main {
-   display: flex;
-   justify-content: space-between;
    background-repeat: no-repeat;
    background-image: url(../img/Mask\ Group.png);
 }
@@ -31,6 +30,7 @@ body {
 //    position: absolute;
 // }
 .content {
+   position: relative;
    padding-left: 45px;
    padding-top: 37px;
    width: 85%;
@@ -38,26 +38,26 @@ body {
 h1 {
    margin-top: -3px;
    color: $pink;
-   font-size: 50px;
-   font-weight: 400;
+   font-size: 55px;
+   font-weight: 500;
    text-transform: uppercase;
    letter-spacing: 1px;
 }
 h3 {
    color: $white;
-   font-size: 30px;
+   font-size: 32px;
    font-weight: 400;
    line-height: 40px;
 }
 h4 {
    color: $pink;
-   font-size: 28px;
+   font-size: 32px;
    font-weight: 400;
    line-height: 20px;
 }
 .text {
    color: $white;
-   font-size: 22px;
+   font-size: 24px;
    line-height: 15px;
    font-weight: 400;
 }
@@ -66,6 +66,7 @@ ul {
    
 }
 li {
+   position: relative;
    display: flex;
    gap: 15px;
    justify-content: start;
@@ -93,6 +94,10 @@ li {
 
 }
 .lady {
+   position: absolute;
+   bottom: 263px;
+   right: -20px;
+   z-index: 15;
    max-width: 363px;
    max-height: 463px;
    align-self: flex-end;
@@ -100,33 +105,77 @@ li {
 }
 .action {
    display: flex;
+   // flex-wrap: wrap;
    gap: 30px;
-   max-width: 1260px;
-   max-height: 218px;
    background-color: #2E2F2F;
    border-radius: 0 0 30px 30px;
-   height: 100%;
 }
 
 h2 {
    color: $pink;
-   font-size: 40px;
+   font-size: 45px;
    font-weight: 400;
    line-height: 15px;
 }
 .description {
    color: $white;
-   font-size: 20px;
+   font-size: 25px;
    font-weight: 400;
    line-height: 28px;
 }
-.acting-area {
-   width: 60%;
-}
+
 .call-to-acting {
    margin-left: 50px;
    margin-top: 27px;
    margin-bottom: 30px;
-   width: 40%;
+   
 }
+.acting-area {
+   
+   display: grid;
+   grid-column-gap: 30px;
+   grid-template-columns: 1fr 1fr;
+   margin-right: 50px;
+   margin-top: 27px;
+   margin-bottom: 30px;
+   width: 60%;
+   // padding-left: 5px;
+}
+input {
+   background-color: #2E2F2F;
+   border: 2px solid #ffffff;
+   border-radius: 10px;
+   padding: 8px 12px;
+   margin-top: 15px;
+   
+}
+input:nth-child(3){
+   background-color: #2E2F2F;
+   border: 2px solid #ffffff;
+   border-radius: 10px;
+   padding: 8px 12px;
+   margin-bottom: 15px;
+   margin-top: 30px;
+}
+input:focus{
+   color: #F1F1F1;
+}
+.btn {
+   padding: 8px 12px;
+   margin-top: 25px;
+   margin-bottom: 15px;
+   border-radius: 10px;
+   margin-top: 25px;
+   background-color: $pink;
+   color: #2E2F2F;
+   font-size: 16px;
+   font-weight: 400;
+   line-height: 19px;
+   text-transform: uppercase;
+}
+.btn:hover{
+   font-size: 18px;
+   font-weight: 600;
+}
+
 
